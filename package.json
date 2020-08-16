@@ -1,0 +1,15 @@
+{
+  "name": "web-developer-downloads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron main.js"
+  },
+  "author": "7086cmd",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "2.13.0"
+  }
+}

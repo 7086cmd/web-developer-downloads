@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainWindow</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/vuetify/dist/vuetify.min.css"> -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/base.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue-router/dist/vue-router.min.js"></script>
+    <!-- <script src="https://unpkg.com/vuetify/dist/vuetify.min.js"></script> -->
+    <style>
+    body {
+        scroll-padding-right: 0;
+        scrollbar-width: 1px;
+        background-color: RGBA(255, 255, 255, 0.0)
+    }
+    #app {
+        background-color: RGB(255, 255, 255);
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <el-container>
+            <el-aside width="1em">
+
+            </el-aside>
+            <el-container>
+                <el-head>
+
+                </el-head>
+                <el-main>
+
+                </el-main>
+                <el-footer>
+
+                </el-footer>
+            </el-container>
+            <el-aside width="120px">
+                <el-button type="warning" circle icon="el-icon-minus" @click="require('electron').ipcRenderer.send('minMainWindow')" size="mini"></el-button>
+                <el-button type="success" circle icon="el-icon-plus" @click="require('electron').ipcRenderer.send('maxMainWindow')" size="mini"></el-button>
+                <el-button type="danger" circle icon="el-icon-close" @click="require('electron').ipcRenderer.send('closeMainWindow')" size="mini"></el-button>
+            </el-aside>
+        </el-container>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data() {
+                return {
+
+                }
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+</html>
